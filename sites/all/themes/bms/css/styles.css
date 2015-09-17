@@ -97,7 +97,6 @@ strong {
 }
 
 img {
-/* 	display: block; */
 	height: auto;
 }
 
@@ -646,7 +645,7 @@ header nav .expanded.active-radius li a:hover {
 	margin-right: -0.25em; /* Adjusts for spacing */
 	background: #ccc;
 }
- 
+
 .page-node-10 .view-alliances .views-field {
 	display: inline-block;
 	vertical-align: middle;
@@ -739,7 +738,7 @@ textarea {
 	border: 1px solid #000;
 }
 
-button, 
+button,
 input[type="submit"] {
 	height: 40px;
 	padding: 0 20px;
