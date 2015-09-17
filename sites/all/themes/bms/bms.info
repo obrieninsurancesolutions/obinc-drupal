@@ -1,0 +1,38 @@
+core = 7.x
+description = BMS is a custom theme based on tao.
+engine = phptemplate
+name = BMS
+
+; Regions =====================================================================
+
+regions[header] = Header
+regions[navigation] = Navigation
+regions[content_top] = Content Top
+regions[content] = Content
+regions[side_nav] = Sidebar Navigation
+regions[left] = Sidebar Left
+regions[right] = Sidebar Right
+regions[footer] = Footer
+regions[help] = Help
+regions[highlighted] = Highlighted
+
+; Stylesheets =================================================================
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/base.css
+stylesheets[screen][] = css/drupal.css
+stylesheets[screen][] = css/styles.css
+stylesheets[print][] = css/print.css
+
+; Scripts =================================================================
+
+scripts[] = js/jquery.validate.min.js
+scripts[] = js/jquery.bxSlider.min.js
+scripts[] = js/scripts.js
+
+; Information added by drupal.org packaging script on 2011-09-21
+version = "7.x-3.0-beta4"
+core = "7.x"
+project = "tao"
+datestamp = "1316616407"
+
