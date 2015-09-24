@@ -833,14 +833,13 @@ lable.error {
 	.logo span { display: none; }
 
 	.home-intro { margin: 0 -20px 24px; }
-	.home-intro:before { width: 33%; }
+	.home-intro:before { width: 100%; opacity: 0.5; }
 	.home-intro li { padding: 40px 33% 40px 0; }
 	.home-intro h2 { font-size: 30px; }
 
-	.prod-ccp { padding-right: 10px; }
-	.prod-cbp { padding-left: 10px; }
-	.product-block p { padding-right: 40%; }
-	.prod-cbp p { padding-right: 30%; }
+ 	.product-block { overflow: hidden; float: none; width: auto; margin-bottom: 20px; }
+	.prod-ccp { padding-right: 0; }
+	.prod-cbp { padding-left: 0; }
 }
 
 @media only screen and (max-width: 940px) {
@@ -876,7 +875,7 @@ lable.error {
 }
 
 @media only screen and (max-width: 600px) {
-	.logo { top: 36px; left: 0; width: 94px; }
+	.logo { top: 36px; left: 0; z-index: 120; width: 94px; }
 	.phone-num { font-size: 18px; }
 
 	.sidebar, .side-nav { width: auto; }
@@ -885,12 +884,9 @@ lable.error {
 
 	.front .content-top { margin-bottom: 16px; }
 	.home-intro { min-height: 0; }
-	.home-intro:before { display: none; }
 	.home-intro li { padding: 40px 0 20px; }
-
- 	.product-block { overflow: hidden; float: none; width: auto; margin-bottom: 20px; }
-	.prod-ccp { padding-right: 0; }
-	.prod-cbp { padding-left: 0; }
+	.prod-ccp .block-wrapper { background-size: 140px auto; }
+	.product-block p { padding-right: 120px; }
 
 	.content, .front .content { float: none; width: auto; }
 
