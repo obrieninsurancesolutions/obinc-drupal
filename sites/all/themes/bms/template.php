@@ -60,16 +60,16 @@ function bms_theme() {
   $items = array();
 
   // Consolidate a variety of theme functions under a single template type.
-  $items['block'] = array(
-    'arguments' => array('block' => NULL),
-    'template' => 'object',
-    'path' => drupal_get_path('theme', 'bms') .'/templates',
-  );
-  $items['comment'] = array(
-    'arguments' => array('comment' => NULL, 'node' => NULL, 'links' => array()),
-    'template' => 'object',
-    'path' => drupal_get_path('theme', 'bms') .'/templates',
-  );
+  // $items['block'] = array(
+  //   'arguments' => array('block' => NULL),
+  //   'template' => 'object',
+  //   'path' => drupal_get_path('theme', 'bms') .'/templates',
+  // );
+  // $items['comment'] = array(
+  //   'arguments' => array('comment' => NULL, 'node' => NULL, 'links' => array()),
+  //   'template' => 'object',
+  //   'path' => drupal_get_path('theme', 'bms') .'/templates',
+  // );
   $items['node'] = array(
     'arguments' => array('node' => NULL, 'teaser' => FALSE, 'page' => FALSE),
     'template' => 'node',
@@ -96,9 +96,9 @@ function bms_theme() {
 /**
  * Preprocess functions ===============================================
  */
-function bms_preprocess_html(&$vars) {
-  $vars['classes_array'][] = 'bms';
-}
+// function bms_preprocess_html(&$vars) {
+//   $vars['classes_array'][] = 'bms';
+// }
 
 /**
  * Implementation of preprocess_page().
@@ -118,16 +118,16 @@ function bms_preprocess_page(&$vars) {
 function bms_preprocess_block(&$vars) {
   $vars['hook'] = 'block';
 
-  $vars['attributes_array']['id'] = $vars['block_html_id'];
+  // $vars['attributes_array']['id'] = $vars['block_html_id'];
 
   $vars['title_attributes_array']['class'][] = 'block-title';
   $vars['title_attributes_array']['class'][] = 'clearfix';
 
-  $vars['content_attributes_array']['class'][] = 'block-content';
+  // $vars['content_attributes_array']['class'][] = 'block-content';
   $vars['content_attributes_array']['class'][] = 'clearfix';
-  if ($vars['block']->module == 'block') {
-    $vars['content_attributes_array']['class'][] = 'prose';
-  }
+  // if ($vars['block']->module == 'block') {
+  //   $vars['content_attributes_array']['class'][] = 'prose';
+  // }
 
   $vars['title'] = !empty($vars['block']->subject) ? $vars['block']->subject : '';
 
@@ -138,7 +138,7 @@ function bms_preprocess_block(&$vars) {
   // preprocess_block().
   if ($vars['block']->module === 'system' && $vars['block']->delta === 'main') {
     $vars['classes_array'] = array_diff($vars['classes_array'], array('block'));
-    $vars['classes_array'][] = 'block-page-content';
+    // $vars['classes_array'][] = 'block-page-content';
   }
 }
 
@@ -153,9 +153,9 @@ function bms_preprocess_node(&$vars) {
   $vars['title_attributes_array']['class'][] = 'node-title';
   $vars['title_attributes_array']['class'][] = 'clearfix';
 
-  $vars['content_attributes_array']['class'][] = 'node-content';
+  // $vars['content_attributes_array']['class'][] = 'node-content';
   $vars['content_attributes_array']['class'][] = 'clearfix';
-  $vars['content_attributes_array']['class'][] = 'prose';
+  // $vars['content_attributes_array']['class'][] = 'prose';
 
   if (isset($vars['content']['links'])) {
     $vars['links'] = $vars['content']['links'];
