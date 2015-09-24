@@ -77,6 +77,14 @@ h4 {
 	margin-left: 20px;
 }
 
+.node ul li {
+	list-style: disc;
+}
+
+.node ol li {
+	list-style: decimal;
+}
+
 a {
 	color: #f90;
 	text-decoration: none;
